@@ -5,35 +5,50 @@
 
 const substitutionModule = (function () {
     function substitution(input, alphabet, encode = true) {
-        if (!alphabet || alphabet.length !== 26) return false;
-        const alphabetArray = alphabet.split("");
-        const alphabetSet = new Set(alphabetArray);
-        if (alphabetArray.length !== alphabetSet.size) return false;
-
-        let results = "";
-        const standardAlphabet = "abcdefghijklmnopqrstuvwxyz";
-        const normalInput = input.toLowerCase();
-
-        for (let i = 0; i < normalInput.length; i++) {
-            const currentChar = normalInput[i];
-
-            if (currentChar === " ") {
-                results += " ";
-                continue;
-            }
-
-            const index = encode
-                ? standardAlphabet.indexOf(currentChar)
-                : alphabet.indexOf(currentChar);
-            results += encode ? alphabet[index] : standardAlphabet[index];
+      if (!alphabet || alphabet.length !== 26) return false;
+      const alphabetArray = alphabet.split("");
+      const alphabetSet = new Set(alphabetArray);
+      if (alphabetArray.length !== alphabetSet.size) return false;
+  
+      let results = "";
+      const standardAlphabet = "abcdefghijklmnopqrstuvwxyz";
+      const normalInput = input.toLowerCase();
+  
+      for (let i = 0; i < normalInput.length; i++) {
+        const currentChar = normalInput[i];
+  
+        if (currentChar === " ") {
+          results += " ";
+          continue;
         }
-
-        return results;
+  
+        const index = encode
+          ? standardAlphabet.indexOf(currentChar)
+          : alphabet.indexOf(currentChar);
+  
+        // Check for unexpected characters
+        if (index === -1) {
+          results += '';  // Remove unexpected characters
+          continue;
+        }
+  
+        const substitutionChar = encode ? alphabet[index] : standardAlphabet[index];
+  
+        // Ensure substitutionChar isn't undefined before appending
+        if (!substitutionChar) {
+          results += ''; // Remove undefined substitutions
+        } else {
+          results += substitutionChar;
+        }
+      }
+  
+      return results;
     }
-
+  
     return {
-        substitution,
+      substitution,
     };
-})();
-
-module.exports = substitutionModule;
+  })();
+  
+  module.exports = substitutionModule;
+  

@@ -24,6 +24,7 @@ const caesarModule = (function () {
                             alphabet.length
                     ]
                 );
+                // console.log(encodedArray);
             } else {
                 // if the letter is not in the alphabet
                 // add the original letter to the encoded array
@@ -33,6 +34,7 @@ const caesarModule = (function () {
         // join the encoded array into a string and return it
         return encodedArray.join("");
     }
+    // console.log(caesar("thinkful", 3, false));
     return {
         // return the object with the method
         caesar,
