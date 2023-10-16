@@ -17,29 +17,34 @@
 
     <style>
       body {
-        background-image: url("img-1.jpg") !important;
+        background-image: url("img-1.jpg");
       }
       /* Added styles for the header */
-
-      /* header h1 {
-        text-align: center;
-        width: 100%;
-        padding: 0px !important;
-      } */
 
       a.text-light.nav-link.active {
         color: white;
       }
 
       .row.align-items-center {
-        background-image: url("decoder-ring-banner.jpg") !important;
+        background-image: url("decoder-ring-banner.jpg");
+        background-size: cover;
+        border:solid black 5px;
+      }
+
+      div.card {    
+        background-color:black;
+        color: white; 
       }
 
       button.btn-primary {
         background-color: black;
         color: rgb(6, 212, 6);
         margin-left: 40%;
-        border: solid black;
+        border: rgb(6, 212, 6) solid;
+      }
+
+      .form-check-label {
+        color: rgb(6, 212, 6);
       }
 
       .card {
@@ -66,6 +71,17 @@
         text-align: center;
         text-decoration: underline !important;
       }
+
+      @media only screen 
+  and (device-width: 585px) 
+  and (device-height: 1266px) 
+  and (-webkit-device-pixel-ratio: 3)  {
+    /* Example: Change the background color for iPhone 13 Pro */
+    .row.align-items-center {
+      border:solid red 5px;
+    }
+}
+
     </style>
 
     <title>Decoder Ring - Home Page</title>
