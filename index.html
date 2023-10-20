@@ -113,9 +113,7 @@
               <p>
                 The Caesar Shift is a type of substitution cipher originally
                 used by Julius Caesar to protect messages of military
-                significance. It relies on taking the alphabet and "shifting"
-                letters to the right or left, based on the typical alphabetic
-                order. One must obtain the shift number of the encoded message if desired to decode it.
+                significance. It shifts letters in the alphabet left or right by a specified number (the shift number). The shift number must be between -25 and 25. To decode, you are required to know the shift number.
               </p>
               <hr />
               <form id="caesar">
@@ -263,12 +261,7 @@
             </div>
             <div class="card-body">
               <p>
-                The Substitution Cipher requires a standard alphabet and a
-                substitution alphabet. Letters from the standard alphabet will
-                be transposed to the standard alphabet. This cipher requires
-                that the recipient have the substitution alphabet, otherwise it
-                will be difficult for them to decode the message. The Substitution Cipher requires a standard alphabet and a
-                substitution alphabet.
+                Uses a standard and a substitution alphabet. Letters from the standard are replaced by those in the substitution. For example, if "A" in the standard becomes "K" in the substitution, then "A" in the message becomes "K". To decode, have the substitution alphabet.
               </p>
               <hr />
               <form id="substitution">
