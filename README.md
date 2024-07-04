@@ -12,4 +12,4 @@ This is a web application that provides tools for encoding and decoding messages
 
 ## Live Demo
 
-You can access the live demo of the project [Live Demo]([https://code-life-hub.github.io/Decryption-Encryption-WebPage/](https://code-life-hub.github.io/Decoder-Ring/)).
+You can access the live demo of the project [Live Demo]([https://code-life-hub.github.io/Decryption-Encryption-WebPage/](https://code-life-hub.github.io/Decoder-Ring/).
